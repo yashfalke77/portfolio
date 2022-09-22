@@ -3,13 +3,13 @@
 <br />
 <div align="center">
   <p align="center">
-    <b>YelpCamp Campgrounds</b>
+    <b>Yash Falke - portfolio</b>
     <br />
     <!-- <a href="https://arcane-retreat-14101.herokuapp.com/">View Demo</a> -->
     <!-- · -->
-    <a href="https://github.com/yashfalke77/food-ordering-app/issues">Report Bug</a>
+    <a href="https://github.com/yashfalke77/portfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/yashfalke77/food-ordering-app/issues">Request Feature</a>
+    <a href="https://github.com/yashfalke77/portfolio/issues">Request Feature</a>
   </p>
 </div>
 
@@ -17,15 +17,15 @@
 
 ## About The Project
 
-Yelp Camp is a web application that allows you to view campgrounds with a short description. Once you login or signup you can begin to create your own campgrounds that includes a title, image, address and short description. Explore the beautiful world through our website
+Hello! My name is Yash Falke and this is my portfolio .I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
 
 ### Project Images
 
 #### Home Page
-<img src="./project screenshots/1.png" alt="Logo" >
+<img src="./project screenshots/2.png" alt="Logo" >
 
 #### contact page
-<img src="./project screenshots/2.png" alt="Logo" >
+<img src="./project screenshots/1.png" alt="Logo" >
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
