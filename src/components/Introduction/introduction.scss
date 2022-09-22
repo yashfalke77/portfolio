@@ -1,0 +1,290 @@
+@import "animate.css";
+@import "../../styles/mixins";
+
+.sectiontag {
+    font-size: 1.8rem;
+    font-family: 'La Belle Aurore', cursive;
+    display: block;
+    color: #ffd700;
+    opacity: 0.7;
+    font-weight: 500;
+    margin: 1.6rem 0rem;
+}
+
+.intro {
+    animation: fadeIn 1s forwards;
+    // will-change: contents;
+    z-index: 1;
+    height: 55rem;
+    // transform-style: preserve-3d;
+    padding: 4rem 2rem;
+    align-items: center;
+    display: flex;
+
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50rem;
+    }
+
+    &__left {
+        flex: 0 0 50%;
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+        }
+
+        @include respond(tab-port) {
+            flex: 0 0 60%;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        height: 55rem;
+        position: relative;
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+            // z-index: -2;
+        }
+
+    }
+
+    &__tag {
+        font-size: 1.8rem;
+        font-family: 'La Belle Aurore', cursive;
+        display: block;
+        color: #ffd700;
+        opacity: 0.7;
+        font-weight: 500;
+    }
+
+    &__logos {
+        width: 3rem;
+        animation: rotateIn 1s linear both;
+        animation-delay: 1.4s;
+    }
+
+    &__headingPrimary {
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.6rem;
+        color: var(--lightest-slate);
+
+        @include respond(phone) {
+            font-size: 5.5rem;
+        }
+
+        &::before {
+            content: "<h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            position: absolute;
+            margin-top: -0.8rem;
+        }
+
+        &::after {
+            content: "</h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+        }
+    }
+
+    &__headingSecondary {
+        color: var(--slate);
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+        font-weight: 500;
+        margin-bottom: 4.6rem;
+
+        &::before {
+            content: "<p>";
+            font-size: 1.8rem;
+            display: block;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        &::after {
+            content: "</p>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            display: block;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+        }
+    }
+
+    &__description {
+        max-width: 56rem;
+        color: var(--slate);
+        margin: 3rem 0rem;
+
+        &::before {
+            content: "<p>";
+            font-size: 1.8rem;
+            display: block;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        &::after {
+            content: "</p>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            display: block;
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-decoration-skip-ink: auto;
+            color: var(--primary);
+            font-size: inherit;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            position: relative;
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    &__button {
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            background-color: transparent;
+            padding: 1rem 1.5rem;
+            font-size: 1.6rem !important;
+            border-radius: 4px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: rgba(#ffd700, $alpha: 0.1);
+        }
+
+        &Active {
+            color: var(--primary);
+        }
+    }
+}
+
+
+@import "../../styles/mixins";
+
+@keyframes line-anime {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    66% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.logo {
+
+    &__container {
+        width: 100%;
+    }
+
+    &__outline {
+        position: absolute;
+        right: 7.28rem;
+        top: 0;
+
+        @include respond(tab-port) {
+            right: 3rem;
+        }
+
+        @include respond(phone) {
+            right: -22rem !important;
+        }
+
+
+    }
+
+    &__fill {
+        position: absolute;
+        right: 7.1rem;
+        top: 0;
+        animation: 4s ease 0s normal forwards fadein;
+        -webkit-animation: 4s ease 0s normal forwards fadein;
+        opacity: 1;
+
+        @include respond(tab-port) {
+            right: 3rem;
+        }
+
+        @include respond(phone) {
+            right: -22rem !important;
+        }
+
+
+
+    }
+}
+
+#yash path {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: line-anime 3s ease-in-out forwards;
+}

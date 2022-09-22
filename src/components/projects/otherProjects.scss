@@ -1,0 +1,129 @@
+.other {
+    padding: 4rem 2rem;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__headingPrimary {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.6rem;
+        color: var(--lightest-slate);
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "<h3>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            margin-right: 1rem;
+            // display: block;
+        }
+
+        &::after {
+            content: "</h3>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+            margin-left: 1rem;
+            // display: block;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        list-style: none;
+        padding: 0px;
+        margin: 50px 0px 0px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+        position: relative;
+        animation: fadeInUp 2s forwards;
+    }
+
+    &__items {
+        box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        padding: 2rem 1.75rem;
+        border-radius: 4px;
+        background-color: #112240;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 60px -15px rgba(2, 12, 27, 0.7);
+        }
+    }
+
+    &__card {
+        &Top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.6rem;
+        }
+
+        &Body {
+            margin: 1.6rem auto;
+
+            &Heading {
+                font-weight: 700;
+                font-size: 2.2rem;
+                color: var(--primary);
+            }
+
+            &Description {
+                color: #a8b2d1;
+                font-size: 1.4rem;
+                margin-top: 0.6rem;
+            }
+        }
+
+        &Link {
+            display: flex;
+            align-items: center;
+        }
+
+        &Folder {
+            width: 3rem;
+            height: 3rem;
+            fill: var(--primary);
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--light-slate);
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+
+        &:hover {
+            fill: var(--primary);
+        }
+    }
+
+    &__tags {
+        color: var(--light-slate);
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+}

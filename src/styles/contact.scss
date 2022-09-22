@@ -1,0 +1,157 @@
+@import "./mixins";
+
+.contact {
+    display: flex;
+    animation: fadeIn 1s forwards;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 0 0 50%;
+        padding: 2rem 5rem;
+    }
+
+    &__right {
+        flex: 1;
+        width: 100%;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__description {
+        color: var(--lightest-slate);
+        font-size: 1.4rem;
+        width: 90%;
+        margin-top: 3rem;
+
+        &::before {
+            content: "<p>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            position: absolute;
+            margin-top: -2rem;
+        }
+
+        &::after {
+            content: "</p>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+        }
+    }
+}
+
+textarea {
+    resize: none;
+    width: 90% !important;
+
+    @include respond(phone) {
+        width: 100% !important;
+    }
+}
+
+.form {
+
+    &::before {
+        content: "<form>";
+        font-size: 1.8rem;
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        opacity: 0.7;
+        font-weight: 500;
+        position: absolute;
+        margin-top: -2rem;
+    }
+
+    &::after {
+        content: "</form>";
+        font-size: 1.8rem;
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        opacity: 0.7;
+        font-weight: 500;
+        animation: fadeIn 1s 1.7s backwards;
+    }
+
+    margin-top: 3rem;
+
+    &__group:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__input {
+        padding: 1.5rem 2rem;
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.5rem;
+        border-radius: 2px;
+        background-color: #112240;
+        border: none;
+        width: 90%;
+        display: block;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease-in-out;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(#000, $alpha: 0.1);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid var(--primary);
+        }
+
+        &::-webkit-input-placeholder {
+            // in safari and chrome
+            color: var(--lightest-slate)
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        display: block;
+        transition: all .3s ease-in-out;
+        color: var(--primary);
+    }
+
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+
+}
+
+.map {
+    &__button {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        animation: fadeIn 4s forwards;
+    }
+}

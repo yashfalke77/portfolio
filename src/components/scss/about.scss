@@ -1,0 +1,283 @@
+@import "../../styles/mixins";
+
+@keyframes spincube {
+
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    16% {
+        transform: rotateY(-90deg);
+    }
+
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+
+    66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+
+    83% {
+        transform: rotateX(90deg);
+    }
+}
+
+.about {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 56.6rem;
+    animation: fadeIn 1s forwards;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 0 0 60%;
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        @include respond(tab-port) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__description {
+        color: var(--slate);
+
+        &::before {
+            content: "<p>";
+            font-size: 1.8rem;
+            display: block;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+
+        &::after {
+            content: "</p>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            display: block;
+            font-weight: 500;
+        }
+    }
+
+    &__skills {
+
+        &Items {
+            &::before {
+                content: "▹";
+                left: 0px;
+                color: var(--primary);
+                font-size: 1.4rem;
+                line-height: 18px;
+            }
+        }
+
+        &List {
+
+            display: grid;
+            grid-template-columns: repeat(3, minmax(14rem, 20rem));
+            gap: 0px 10px;
+            padding: 0px;
+            margin: 1rem 0px 0px;
+            overflow: hidden;
+            list-style: none;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+
+            @include respond(phone) {
+                grid-template-columns: repeat(2, minmax(14rem, 20rem));
+            }
+        }
+    }
+
+    &__headingPrimary {
+        font-size: 4.5rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.6rem;
+        color: var(--lightest-slate);
+
+        &::before {
+            content: "<h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            display: block;
+        }
+
+        &::after {
+            content: "</h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+            display: block;
+        }
+    }
+
+    &__link {
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            text-decoration-skip-ink: auto;
+            color: var(--primary);
+            font-size: inherit;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    &__icon {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+.stage-cube-cont {
+    margin-bottom: 28rem;
+
+    @include respond(tab-port) {
+        margin-top: 6rem;
+    }
+
+}
+
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 10rem 10rem 0;
+    margin-left: calc(50% - 10rem);
+
+    @include respond(tab-port) {
+        margin-left: calc(50% - 15rem);
+    }
+
+    @include respond(phone) {
+        margin-left: calc(50% - 12rem);
+    }
+
+
+    @keyframes spincube {
+
+        from,
+        to {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        16% {
+            transform: rotateY(-90deg) rotateZ(90deg);
+        }
+
+        33% {
+            transform: rotateY(-90deg) rotateX(90deg);
+        }
+
+        50% {
+            transform: rotateY(-180deg) rotateZ(90deg);
+        }
+
+        66% {
+            transform: rotateY(-270deg) rotateX(90deg);
+        }
+
+        83% {
+            transform: rotateX(90deg);
+        }
+    }
+
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0px lightyellow;
+    }
+
+    .face1 {
+        transform: translateZ(100px);
+        color: #dd0031;
+    }
+
+    .face2 {
+        transform: rotateY(90deg) translateZ(100px);
+        color: #f06529;
+    }
+
+    .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+        color: #28a4d9;
+    }
+
+    .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+        color: #5ed4f4;
+    }
+
+    .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+        color: #efd81d;
+    }
+
+    .face6 {
+        transform: rotateX(-90deg) translateZ(100px);
+        color: #ec4d28;
+    }
+}

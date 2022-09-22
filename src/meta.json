@@ -1,0 +1,65 @@
+{
+  "name": "portfolio",
+  "plugins": [
+    {
+      "name": "SASS/SCSS",
+      "description": "Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax.",
+      "url": "https://sass-lang.com/documentation"
+    },
+    {
+      "name": "Axios",
+      "description": "Promise based HTTP client for the browser and node.js.",
+      "url": "https://github.com/axios/axios"
+    },
+    {
+      "name": "SVGR",
+      "description": "Transform SVGs into React components.",
+      "url": "https://react-svgr.com/docs/getting-started/"
+    },
+    {
+      "name": "Bundle Analyzer",
+      "description": "Source map explorer analyzes JavaScript bundles using the source maps. This helps you understand where code bloat is coming from.",
+      "url": "https://github.com/danvk/source-map-explorer#readme"
+    },
+    {
+      "name": "SWR",
+      "description": "React Hooks library for data fetching from Vercel",
+      "url": "https://swr.vercel.app/"
+    },
+    {
+      "name": "react-use",
+      "description": "A Collection of useful React hooks.",
+      "url": "https://github.com/streamich/react-use"
+    },
+    {
+      "name": "next-i18next",
+      "description": "react-i18next is a powerful internationalization framework for React / React Native which is based on i18next. Check out the history of i18next and when react-i18next was introduced.",
+      "url": "https://react.i18next.com"
+    },
+    {
+      "name": "eslint",
+      "description": "",
+      "url": ""
+    },
+    {
+      "name": "jest",
+      "description": "",
+      "url": ""
+    },
+    {
+      "name": "Cypress",
+      "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+      "url": "https://docs.cypress.io/guides/overview/why-cypress.html"
+    },
+    {
+      "name": "Docker",
+      "description": "Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.",
+      "url": "https://www.docker.com/get-started"
+    },
+    {
+      "name": "Github Actions",
+      "description": "GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.",
+      "url": "https://docs.github.com/en/actions"
+    }
+  ]
+}

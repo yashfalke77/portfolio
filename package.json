@@ -1,0 +1,66 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^3.7.0",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^12.20.10",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "animate.css": "^4.1.1",
+    "axios": "^0.21.1",
+    "i18next": "^20.2.2",
+    "mapbox-gl": "^2.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.8.15",
+    "react-lazyload": "^3.2.0",
+    "react-map-gl": "^7.0.19",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.0",
+    "react-use": "^15.3.8",
+    "sass": "^1.32.5",
+    "source-map-explorer": "^2.5.2",
+    "swr": "^0.4.0",
+    "typescript": "^4.2.4",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "svgr": "npx @svgr/cli -d src/components/icons --ignore-existing --icon --typescript public/icons",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --config video=false",
+    "cypress:test": "start-server-and-test start http://localhost:3000 cypress:run"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "not ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@svgr/cli": "^5.5.0",
+    "cypress": "^6.2.1",
+    "nock": "^13.0.11",
+    "start-server-and-test": "^1.11.0"
+  }
+}
