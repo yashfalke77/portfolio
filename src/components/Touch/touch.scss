@@ -1,0 +1,68 @@
+@import "../../scss/mixins";
+
+.sec {
+    padding: 4rem 2rem;
+    animation: fadeIn 2s forwards;
+    height: 54rem;
+}
+
+.touch {
+    padding: 0rem 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include respond(phone) {
+        padding: 0rem 5rem;
+    }
+
+    &__label {
+        color: var(--primary);
+        margin-bottom: 3rem;
+    }
+
+
+    &__headingPrimary {
+        font-size: 6rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.6rem;
+        color: var(--lightest-slate);
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        @include respond(phone) {
+            font-size: 4rem;
+        }
+
+        &::before {
+            content: "<h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+
+        &::after {
+            content: "</h1>";
+            font-size: 1.8rem;
+            font-family: 'La Belle Aurore', cursive;
+            color: #ffd700;
+            opacity: 0.7;
+            font-weight: 500;
+            animation: fadeIn 1s 1.7s backwards;
+            margin-left: 1rem;
+        }
+    }
+
+    &__description {
+        color: var(--light-slate);
+        margin-bottom: 2rem;
+    }
+}

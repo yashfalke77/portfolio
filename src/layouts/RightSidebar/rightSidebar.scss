@@ -1,0 +1,57 @@
+@import "../../scss/mixins";
+
+
+.right {
+    position: fixed;
+    bottom: 0;
+    right: 4rem;
+    left: auto;
+    animation: fadeIn 1s forwards;
+
+    @include respond(phone) {
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &__social {
+        list-style: none;
+    }
+
+    &__email {
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: var(--light-slate);
+            letter-spacing: 0.15em;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            margin: 20px auto;
+            font-size: 1.3rem;
+            padding: 10px;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        &:hover {
+            color: var(--primary);
+            transform: translateY(-5px);
+
+        }
+
+    }
+
+    &__line {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 9rem;
+        margin: 0px auto;
+        background-color: var(--light-slate);
+        margin-top: 1.3rem;
+    }
+
+}

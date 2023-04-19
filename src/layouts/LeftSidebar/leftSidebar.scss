@@ -1,0 +1,49 @@
+@import "../../scss/mixins";
+
+.left {
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    right: auto;
+    animation: fadeIn 1s forwards;
+
+    @include respond(phone) {
+        display: none;
+    }
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &__social {
+        list-style: none;
+    }
+
+    &__linkItems {
+        padding: 1rem;
+        cursor: pointer;
+
+        &:hover .left__icon {
+            fill: var(--primary);
+            transform: translateY(-5px);
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--light-slate);
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        cursor: pointer;
+    }
+
+    &__line {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 9rem;
+        margin: 0px auto;
+        background-color: var(--light-slate);
+        margin-top: 1.3rem;
+    }
+}

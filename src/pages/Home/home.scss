@@ -1,0 +1,22 @@
+@import "../../scss/mixins";
+
+.page {
+    display: flex;
+
+    &__left,
+    &__right {
+        flex: 0 0 8%;
+
+        @include respond(phone) {
+            display: none;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__center {
+        flex: 1;
+    }
+}

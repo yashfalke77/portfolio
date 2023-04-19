@@ -1,0 +1,83 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": ["plugin:react/recommended", "airbnb", "airbnb-typescript"],
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "unicorn"],
+    "rules": {
+      "@typescript-eslint/strict-boolean-expressions": 0,
+      "@typescript-eslint/triple-slash-reference": 0,
+      "no-console": "error",
+      "func-names": "off",
+      "no-underscore-dangle": "off",
+      "consistent-return": "off",
+      "jest/expect-expect": "off",
+      "security/detect-object-injection": "off",
+      "indent": ["error", 2],
+      "semi": "error",
+      "lines-between-class-members": ["error", "always"],
+      "complexity": [2, 10],
+      "max-depth": ["error", 4],
+      "max-len": "off",
+      "space-before-function-paren": "off",
+      "linebreak-style": "off",
+      "key-spacing": ["error", { "beforeColon": false }],
+      "keyword-spacing": ["error", { "before": true }],
+      "brace-style": "error",
+      "no-trailing-spaces": "error",
+      "no-debugger": "warn",
+      "max-nested-callbacks": [2, 3],
+      "radix": "off",
+      "jsx-quotes": ["error", "prefer-single"],
+      "import/no-extraneous-dependencies": "off",
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function"
+        }
+      ],
+      "jsx-a11y/label-has-associated-control": ["error", {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }],
+      "jsx-a11y/label-has-for": ["error", {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }],
+      "react/jsx-props-no-spreading": "off",
+      "unicorn/better-regex": "error",
+      "unicorn/consistent-destructuring": "error",
+      "unicorn/explicit-length-check": "error",
+      "unicorn/no-array-for-each": "error",
+      "unicorn/no-for-loop": "error",
+      "unicorn/no-lonely-if": "error",
+      "unicorn/no-nested-ternary": "error",
+      "unicorn/no-unreadable-iife": "error",
+      "unicorn/no-useless-spread": "error",
+      "unicorn/no-useless-switch-case": "error",
+      "unicorn/prefer-array-find": "error",
+      "unicorn/prefer-default-parameters": "error",
+      "unicorn/prefer-includes": "error",
+      "unicorn/prefer-logical-operator-over-ternary": "error",
+      "unicorn/prefer-prototype-methods": "error",
+      "unicorn/prefer-spread": "error",
+      "unicorn/prefer-string-replace-all": "error",
+      "unicorn/prefer-string-slice": "error",
+      "unicorn/prefer-string-starts-ends-with": "error",
+      "unicorn/prefer-string-trim-start-end": "error",
+      "unicorn/prefer-switch": "error",
+      "unicorn/prevent-abbreviations": "off",
+      "react/no-unknown-property": "off",
+      "react/prop-types": "off",
+      "react/no-array-index-key": "off"
+    }
+  }

@@ -1,5 +1,5 @@
 @import "animate.css";
-@import "../../styles/mixins";
+@import "../../scss/mixins";
 
 .sectiontag {
     font-size: 1.8rem;
@@ -218,7 +218,7 @@
 }
 
 
-@import "../../styles/mixins";
+@import "../../scss/mixins";
 
 @keyframes line-anime {
     to {

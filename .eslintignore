@@ -1,0 +1,7 @@
+# removing tailwind config file 
+tailwind.config.cjs
+postcss.config.cjs
+vite.config.ts
+
+# removing node_modules
+node_modules
