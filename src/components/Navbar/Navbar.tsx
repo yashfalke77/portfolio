@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './navbar.scss';
 
 const Navbar = () => (
@@ -12,28 +13,28 @@ const Navbar = () => (
     <div className='navbar__right'>
       <ul className='navbar__list'>
         <li className='navbar__items'>
-          <a href='/#about' className='navbar__itemsLink'>
+          <HashLink to='/#about' className='navbar__itemsLink'>
             <span className='navbar__itemsLinkNumeric'>01.</span>
-            .about()
-          </a>
+            About
+          </HashLink>
         </li>
         <li className='navbar__items'>
-          <a href='/#about' className='navbar__itemsLink'>
+          <HashLink to='/#projects' className='navbar__itemsLink'>
             <span className='navbar__itemsLinkNumeric'>02.</span>
-            .skills()
-          </a>
+            Projects
+          </HashLink>
         </li>
         <li className='navbar__items'>
-          <a href='/#about' className='navbar__itemsLink'>
+          <HashLink to='/#work' className='navbar__itemsLink'>
             <span className='navbar__itemsLinkNumeric'>03.</span>
-            .work()
-          </a>
+            Work
+          </HashLink>
         </li>
         <li className='navbar__items'>
-          <a href='/#about' className='navbar__itemsLink'>
+          <NavLink to='/contact' className='navbar__itemsLink'>
             <span className='navbar__itemsLinkNumeric'>04.</span>
-            .contact()
-          </a>
+            Contact
+          </NavLink>
         </li>
       </ul>
       <a href='https://drive.google.com/file/d/1SArkoqiFxn9qevyzhdjTVBb6oJnRb6F_/view?usp=sharing' target='_blank' rel='noreferrer' className='navbar__button'>Resume</a>

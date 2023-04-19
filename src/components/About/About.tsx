@@ -12,7 +12,7 @@ const About = () => {
     }, 4000);
   });
   return (
-    <div className='about'>
+    <div className='about' id='about'>
       <div className='about__left'>
         <span className='sectiontag'>&lt;section&gt;</span>
         <h1 className='about__headingPrimary'>
@@ -24,13 +24,14 @@ const About = () => {
           <span className='about__link'>Yash&nbsp;Falke</span>
           {' '}
           and I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
-          <br />
-          <br />
+          {/* <br />
+          <br /> */}
+          {' '}
           Well-organised person, problem solver, focused student at
           {' '}
           <a href='https://vit.edu.in/' target='_blank' rel='noreferrer' className='intro__link'>VIT-MUMBAI</a>
           {' '}
-          with high attention to detail. Fan of Gaming esports, outdoor activities, TV series and Japanese anime. A family person and father of two fractious boys.
+          with high attention to detail. Fan of Gaming esports, outdoor activities, TV series and Japanese anime.
           <br />
           <br />
           Here are the few technologies that I&apos;have been working recently:
@@ -39,16 +40,16 @@ const About = () => {
           <ul className='about__skillsList'>
             <li className='about__skillsItems'>Javascript(ES6+)</li>
             <li className='about__skillsItems'>Python</li>
-            <li className='about__skillsItems'>HTML/CSS</li>
+            <li className='about__skillsItems'>Scss / Sass</li>
             <li className='about__skillsItems'>Nodejs</li>
             <li className='about__skillsItems'>Expressjs</li>
-            <li className='about__skillsItems'>Reactjs</li>
-            <li className='about__skillsItems'>MongoDb</li>
-            <li className='about__skillsItems'>Nextjs</li>
-            <li className='about__skillsItems'>React Redux</li>
+            <li className='about__skillsItems'>React.js & Redux</li>
+            <li className='about__skillsItems'>MongoDB</li>
+            <li className='about__skillsItems'>Next.js</li>
+            <li className='about__skillsItems'>Angular</li>
             <li className='about__skillsItems'>SQL</li>
-            <li className='about__skillsItems'>Data Structures</li>
-            <li className='about__skillsItems'>Algorithms</li>
+            <li className='about__skillsItems'>DSA</li>
+            <li className='about__skillsItems'>AngularJs</li>
           </ul>
         </div>
         <span className='sectiontag'>&lt;/section&gt;</span>

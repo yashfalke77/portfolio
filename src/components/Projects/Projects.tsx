@@ -13,7 +13,7 @@ const Project = () => {
     }, 4000);
   });
   return (
-    <div className='project'>
+    <div className='project' id='projects'>
       <span className='sectiontag'>&lt;section&gt;</span>
       <h1 className='about__headingPrimary'>
         <AnimatedLettersFast letterClass={letterClass} strArray={nameArray} idx={15} />

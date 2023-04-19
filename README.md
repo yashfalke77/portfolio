@@ -41,7 +41,7 @@ My Portfolio made using react-vite
 - Install this specific version of `nodejs` using `nvm` : `nvm install v18.12.1`
 - Check `nodejs` version by typing : `node -v`
 - If multiple versions are installed use the correct version : `nvm use v18.12.1`
-- Remove `node_modules` folders if exist in the `smart-fir-app` directory
+- Remove `node_modules` folders if exist in the `portfolio` directory
 - Install dependencies : `npm i`
 - Install eslint for quick fixing of clean code rules: `npm install -g eslint` and `npm install -g prettier`
 - Run the below command to server in development mode.
