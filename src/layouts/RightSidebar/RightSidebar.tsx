@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './rightSideBar.scss';
+import './rightSidebar.scss';
 
 const RightSideBar = () => (
   <div className='right'>
