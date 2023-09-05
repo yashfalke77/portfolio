@@ -24,16 +24,17 @@ const Contact = () => {
     e.preventDefault();
 
     if (form.current !== null) {
-      emailjs.sendForm('service_7yhr48h', 'template_56ibui7', form.current, 'hWYBLhSzbCLzcSlTF')
+      emailjs.sendForm('service_clrfl7q', 'template_56ibui7', form.current, 'hWYBLhSzbCLzcSlTF')
         .then(() => {
           window.alert('Mail Sent Successfully!!!');
-        }, () => {
+        }, (error) => {
+          window.alert('Mail Not Sent!!!');
         });
     }
 
     if (inputRef1.current !== null) inputRef1.current.value = '';
     if (inputRef2.current !== null) inputRef2.current.value = '';
-    if (inputRef2.current !== null) inputRef2.current.value = '';
+    if (inputRef3.current !== null) inputRef3.current.value = '';
   };
 
   return (
@@ -55,14 +56,14 @@ const Contact = () => {
               <label htmlFor='name' className='form__label'>Full Name</label>
             </div>
             <div className='form__group'>
-              <input type='email' ref={inputRef2} name='user_email' className='form__input' id='email' placeholder='Email Address' required />
+              <input type='email' ref={inputRef2} name='user_email' className='form__input' id='email' placeholder='Enter Your Email Address' required />
               <label htmlFor='email' className='form__label'>Email Address</label>
             </div>
             <div className='form__group'>
-              <textarea name='message' ref={inputRef3} className='form__input' id='email' placeholder='Message' required />
-              <label htmlFor='email' className='form__label'>Message</label>
+              <textarea name='message' ref={inputRef3} className='form__input' id='message' placeholder='Message' required />
+              <label htmlFor='message' className='form__label'>Message</label>
             </div>
-            <button type='button' value='Send' className='intro__button'>
+            <button type='submit' value='Send' className='intro__button'>
               Send Mail
             </button>
           </form>

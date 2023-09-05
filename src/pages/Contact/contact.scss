@@ -3,6 +3,7 @@
 .contact {
     display: flex;
     animation: fadeIn 1s forwards;
+    height: 100vh;
 
     @include respond(tab-port) {
         flex-direction: column;
